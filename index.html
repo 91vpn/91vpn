@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>91客户服务</title>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="icon-57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icon-72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="icon-57@2x.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="icon-72@2x.png">
+    <link rel="apple-touch-startup-image" sizes="640×960" href="Default@2x~iphone.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="91客户服务">
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no">
+    <link
+            href="https://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css"
+            rel="stylesheet" />
+    <style type="text/css">
+        .page-header {
+            padding-bottom: 0px;
+            margin: 0 0 0;
+            text-align: center;
+        }
+
+        body{
+            padding: 0 10px 10px 10px;
+        }
+
+        .info-panel{
+            position: relative;
+        }
+        .info-panel img{
+            width: 52px;height: 52px;float: left;
+        }
+        .info-panel div{
+            width: 150px;float: left;margin-left: 20px;
+        }
+        .info-panel div h5{
+            padding: 0;margin: 0;
+        }
+        .info-panel div p{
+            margin: 0;
+        }
+        .info-panel>a{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            width: 80px;
+            height: 36px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="page-header">
+    <h4>客户服务中心</h4>
+</div>
+<h5>欢迎您，这里是 91VPN 客户服务中心。</h5>
+<p>
+    服务中心提供客服咨询服务，请通过下方客服信息添加您到专属客服。如果您到App不可用，也可以通过下发下载链接下载最新版本到App。
+
+</p>
+<p style="color: red;">为了更好为您提供稳定的服务，请将本页面添加到手机到主屏幕，并一直保留。</p>
+
+<div class="panel panel-default">
+    <div class="panel-body info-panel">
+        <img src="kefu.jpg"  />
+        <div>
+            <h5>专属客服</h5>
+            <a href="#">13545654567</a>
+            <p>您到专属微信客服</p>
+        </div>
+        <a  href="#" class="btn btn-primary">添加客服</a>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-body info-panel">
+        <img src="icon-57.png"  />
+        <div>
+            <h5>下载最新客户端</h5>
+
+            <p>91VPN最新版本</p>
+        </div>
+        <a id="downloadButton" href="#" class="btn btn-primary">立刻下载</a>
+    </div>
+</div>
+<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script
+        src="https://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    //iOS Web APP中点击链接跳转到Safari 浏览器新标签页的问题 devework.com
+    //stanislav.it/how-to-prevent-ios-standalone-mode-web-apps-from-opening-links-in-safari
+    if(("standalone" in window.navigator) && window.navigator.standalone){
+        var noddy, remotes = false;
+        document.addEventListener('click', function(event) {
+            noddy = event.target;
+            while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+                noddy = noddy.parentNode;
+            }
+            if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes))
+            {
+                event.preventDefault();
+                document.location.href = noddy.href;
+            }
+        },false);
+    }
+</script>
+<script type="text/javascript" charset="UTF-8" src="//res.cdn.openinstall.io/openinstall.js"></script>
+<script type="text/javascript">
+    var data = OpenInstall.parseUrlParams();
+    new OpenInstall({
+        /*appKey必选参数，openinstall平台为每个应用分配的ID*/
+        appKey : "xs3i9p",
+        onready : function() {
+            var m = this, button = document.getElementById("downloadButton");
+            button.style.visibility = "visible";
+            m.schemeWakeup();
+            button.onclick = function() {
+                m.wakeupOrInstall();
+                return false;
+            }
+        }
+    }, data);
+
+</script>
+</body>
+</html>
