@@ -1,6 +1,6 @@
 var config = {
-    rootUrl:"https://test356.github.io/jiasuqi",
-    OpenInstallAppKey:"xs3i9p",
+    rootUrl:"https://91vpn.github.io/91vpn",
+    OpenInstallAppKey:"u36mva",
     potatoCAll:"pt://resolve?domain=p91vpn",
     potatoUrl:"https://pt.im/joinchat/0026c0944d4fb147454488401643d9890d1"
 };
