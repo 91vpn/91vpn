@@ -4,7 +4,7 @@ var config = {
     potatoCAll:"pt://resolve?domain=p91vpn",
     potatoUrl:"https://pt.im/joinchat/0026c0944d4fb147454488401643d9890d1"
 };
-
+ 
 
 
 var  browser = {
@@ -48,7 +48,7 @@ function buildQrcode(id,url){
  * 打开potato客服
  * @returns {boolean}
  */
-function potato(){
+function potato(dowloadEle){
     var timeout = 2300, timer = null;
     if(browser.versions.weixin||browser.versions.qq) {
         alert("请在手机浏览器中打开");
@@ -63,14 +63,17 @@ function potato(){
                 var endTime = Date.now();
                 if(!startTime || endTime - startTime < timeout + 300) {
                     document.body.removeChild(ifr);
-                    window.open("https://mobile.baidu.com/item?docid=26057937&source=mobres&from=1010680m");
+                    $("#"+dowloadEle).show().find("a").attr("href","https://mobile.baidu.com/item?docid=26057937&source=mobres&from=1010680m")
+
                 }
             }, timeout);
         }
         if(browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
                 window.location.href = "pt://resolve?domain=p91vpn"; //唤起协议，由iOS小哥哥提供
                 timer = setTimeout(function() {
-                    window.location.href = "https://apps.apple.com/cn/app/potato-chat/id1204726898";
+                    $("#"+dowloadEle).show().find("a").attr("href","https://apps.apple.com/cn/app/potato-chat/id1204726898")
+
+
                 }, timeout);
         }
     }
