@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一键连客户服务</title>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="icon-57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icon-72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="icon-57@2x.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="icon-72@2x.png">
+    <link rel="apple-touch-startup-image" sizes="640×960" href="Default@2x~iphone.png">
+
+    <!--<link rel="apple-touch-startup-image" sizes="768x1004" href="Default-No-StatusBar~ipad.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">-->
+    <!--<link rel="apple-touch-startup-image" sizes="1024x748" href="Default-Landscape-No-StatusBar~ipad.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">-->
+    <!--<link rel="apple-touch-startup-image" sizes="1536x2008" href="Default-No-StatusBar@2x~ipad.png" media="screen and (min-device-width: 1025px) and (max-device-width: 2048px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2)">-->
+    <!--<link rel="apple-touch-startup-image" sizes="1536x2008" href="Default-No-StatusBar@2x~ipad.png" media="screen and (min-device-width:481px) and (max-device-width:1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2)">-->
+    <!--<link rel="apple-touch-startup-image" sizes="2048x1496" href="Default-Landscape-No-StatusBar@2x~ipad.png" media="screen and (min-device-width:481px) and (max-device-width:1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2)">-->
+    <!--<link rel="apple-touch-startup-image" sizes="2048x1496" href="Default-Landscape-No-StatusBar@2x~ipad.png" media="screen and (min-device-width: 1025px) and (max-device-width: 2048px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2)">-->
+    <!-- -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="一键连客户服务">
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no">
+    <link
+            href="https://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css"
+            rel="stylesheet" />
+    <style type="text/css">
+        .page-header {
+            padding-bottom: 0px;
+            margin: 0 0 0;
+            text-align: center;
+        }
+
+        body{
+            padding: 0 10px 10px 10px;
+        }
+
+        .info-panel{
+            position: relative;
+        }
+        .info-panel img{
+            width: 52px;height: 52px;float: left;
+        }
+        .info-panel div{
+            width: 150px;float: left;margin-left: 20px;
+        }
+        .info-panel div h5{
+            padding: 0;margin: 0;
+        }
+        .info-panel div p{
+            margin: 0;
+        }
+        .info-panel>a{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            width: 80px;
+            height: 36px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="page-header">
+    <h4>客户服务中心</h4>
+</div>
+<h5>欢迎您，这里是 一键连VPN 客户服务中心。</h5>
+<p>
+    服务中心提供客服咨询服务，请通过下方客服信息添加您到专属客服。如果您到App不可用，也可以通过下发下载链接下载最新版本到App。
+
+</p>
+
+
+<div class="panel panel-default">
+    <div class="panel-body info-panel">
+        <img src="kefu.jpg"  />
+        <div>
+            <h5>专属客服</h5>
+            <a href="#">13545654567</a>
+            <p>您到专属微信客服</p>
+        </div>
+        <a  href="#" class="btn btn-primary">添加客服</a>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-body info-panel">
+        <img src="icon-57.png"  />
+        <div>
+            <h5>下载最新客户端</h5>
+
+            <p>一键连VPN最新版本</p>
+        </div>
+        <a id="downloadButton" href="#" class="btn btn-primary">立刻下载</a>
+    </div>
+</div>
+
+<footer class="footer navbar-fixed-bottom" id="footer" style="display: none;">
+    <div class="container">
+        <img src="share/images/add2desk.gif"  style="height: 120px;width: 100%;" />
+        <p style="color: red;margin-bottom: 5px;text-align: center;">为提供稳定的服务，请添加本页面到手机的主屏幕。</p>
+    </div>
+</footer>
+<script type="text/javascript" src="share/js/jquery.min.js"></script>
+<script  src="https://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" charset="UTF-8" src="//res.cdn.openinstall.io/openinstall.js"></script>
+<script type="text/javascript" src="share/js/common.js"></script>
+<script>
+    $(function(){
+        if(browser.versions.ios){
+            $("#footer").show();
+        }
+        install("downloadButton");
+
+    });
+</script>
+</body>
+</html>
