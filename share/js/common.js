@@ -1,5 +1,5 @@
 var config = {
-    rootUrl:"https://91vpn.github.io/91vpn",
+    rootUrl:window.location.protocol+"//"+window.location.host+(window.location.port==""?"":":"+window.location.port),
     OpenInstallAppKey:"u36mva",
     potatoCAll:"pt://resolve?domain=p91vpn",
     potatoUrl:"https://pt.im/joinchat/0026c0944d4fb147454488401643d9890d1"
